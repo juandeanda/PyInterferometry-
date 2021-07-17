@@ -10,8 +10,9 @@ def read(file):
     f.close()
     return coefficients, degree
 def readNumericalCoef(coef,degree):
-    Coefs = np.zeros(degree+1)
-    for i in range(0,degree+1):
+    val = int((degree+1)*(degree+2)*0.5)
+    Coefs = np.zeros(val+1)
+    for i in range(0,val):
        a = "a_"+str(i)
        Coefs[i] = coef[0][a]
     return Coefs
